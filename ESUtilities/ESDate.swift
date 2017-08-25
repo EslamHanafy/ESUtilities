@@ -9,10 +9,10 @@
 import Foundation
 
 
-public class ESDateUtility:ESUtilities {
+internal class ESDate:NSObject {
     
     /// the shared instance of the class
-    public static let sharedDateUtility:ESDateUtility = ESDateUtility()
+    public static let utility:ESDate = ESDate()
     
     //MARK: - Current date methods
     
@@ -141,25 +141,25 @@ public class ESDateUtility:ESUtilities {
     public func getHumanDate(fromDate date:Date , localized:Bool = false)->String{
         let currentDate = Date()
         if currentDate.years(from: date)   > 0 {
-            return localized ? "\(currentDate.years(from: date))" + localizedSitringFor(key: "ESYear") : "\(currentDate.years(from: date))y"
+            return localized ? "\(currentDate.years(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESYear") : "\(currentDate.years(from: date))y"
         }
         if currentDate.months(from: date)  > 0 {
-            return localized ? "\(currentDate.months(from: date))" + localizedSitringFor(key: "ESMonth") : "\(currentDate.months(from: date))M"
+            return localized ? "\(currentDate.months(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESMonth") : "\(currentDate.months(from: date))M"
         }
         if currentDate.weeks(from: date)   > 0 {
-            return localized ? "\(currentDate.weeks(from: date))" + localizedSitringFor(key: "ESWeek") : "\(currentDate.weeks(from: date))w"
+            return localized ? "\(currentDate.weeks(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESWeek") : "\(currentDate.weeks(from: date))w"
         }
         if currentDate.days(from: date)    > 0 {
-            return localized ? "\(currentDate.days(from: date))" + localizedSitringFor(key: "ESDay") : "\(currentDate.days(from: date))d"
+            return localized ? "\(currentDate.days(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESDay") : "\(currentDate.days(from: date))d"
         }
         if currentDate.hours(from: date)   > 0 {
-            return localized ? "\(currentDate.hours(from: date))" + localizedSitringFor(key: "ESHour") : "\(currentDate.hours(from: date))h"
+            return localized ? "\(currentDate.hours(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESHour") : "\(currentDate.hours(from: date))h"
         }
         if currentDate.minutes(from: date) > 0 {
-            return localized ? "\(currentDate.minutes(from: date))" + localizedSitringFor(key: "ESMinute") : "\(currentDate.minutes(from: date))m"
+            return localized ? "\(currentDate.minutes(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESMinute") : "\(currentDate.minutes(from: date))m"
         }
         if currentDate.seconds(from: date) > 0 {
-            return localized ? "\(currentDate.seconds(from: date))" + localizedSitringFor(key: "ESSecond") : "\(currentDate.seconds(from: date))s"
+            return localized ? "\(currentDate.seconds(from: date))" + ESUtilities.utility.localizedSitringFor(key: "ESSecond") : "\(currentDate.seconds(from: date))s"
         }
         return ""
     }

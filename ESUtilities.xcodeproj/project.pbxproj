@@ -10,7 +10,7 @@
 		AA4CD5F91F33DBA6002E3663 /* ESUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4CD5EF1F33DBA6002E3663 /* ESUtilities.framework */; };
 		AA4CD5FE1F33DBA6002E3663 /* ESUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CD5FD1F33DBA6002E3663 /* ESUtilitiesTests.swift */; };
 		AA4CD6001F33DBA6002E3663 /* ESUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4CD5F21F33DBA6002E3663 /* ESUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA4CD60C1F33F54E002E3663 /* ESDateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CD60A1F33F54E002E3663 /* ESDateUtility.swift */; };
+		AA4CD60C1F33F54E002E3663 /* ESDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CD60A1F33F54E002E3663 /* ESDate.swift */; };
 		AA4CD60D1F33F54E002E3663 /* ESUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CD60B1F33F54E002E3663 /* ESUtilities.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		AA4CD5F81F33DBA6002E3663 /* ESUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4CD5FD1F33DBA6002E3663 /* ESUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESUtilitiesTests.swift; sourceTree = "<group>"; };
 		AA4CD5FF1F33DBA6002E3663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA4CD60A1F33F54E002E3663 /* ESDateUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDateUtility.swift; sourceTree = "<group>"; };
+		AA4CD60A1F33F54E002E3663 /* ESDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDate.swift; sourceTree = "<group>"; };
 		AA4CD60B1F33F54E002E3663 /* ESUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				AA4CD5F21F33DBA6002E3663 /* ESUtilities.h */,
-				AA4CD60A1F33F54E002E3663 /* ESDateUtility.swift */,
+				AA4CD60A1F33F54E002E3663 /* ESDate.swift */,
 				AA4CD60B1F33F54E002E3663 /* ESUtilities.swift */,
 				AA4CD5F31F33DBA6002E3663 /* Info.plist */,
 			);
@@ -206,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4CD60D1F33F54E002E3663 /* ESUtilities.swift in Sources */,
-				AA4CD60C1F33F54E002E3663 /* ESDateUtility.swift in Sources */,
+				AA4CD60C1F33F54E002E3663 /* ESDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +418,7 @@
 				AA4CD6051F33DBA6002E3663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA4CD6061F33DBA6002E3663 /* Build configuration list for PBXNativeTarget "ESUtilitiesTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				AA4CD6081F33DBA6002E3663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
