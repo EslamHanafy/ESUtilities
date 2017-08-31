@@ -87,66 +87,35 @@ public class ESUtilities:NSObject {
     
     
     
-}
+    //MARK: - Colors
+    /// get color from hex string
+    ///
+    /// - Parameters:
+    ///   - hex: six hex characters for the color.
+    ///   - alpha: alpha value for the color , default is 1.0.
+    /// - Returns: the color that is referring to the given hex code, but if you gave a wrong code, it will return black color.
+    public func colorFrom (hexString hex:String,withAlpha alpha:CGFloat = 1.0) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.black
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: alpha
+        )
+    }
 
-//MARK: - Optional safe wrapping
-//MARK: Safe String
-extension Optional where Wrapped == String {
-    var ESSafeValue:String { get { return self ?? "" } }
-}
-//MARK: Safe Int
-extension Optional where Wrapped == Int {
-    var ESSafeValue:Int { get { return self ?? 0 } }
-}
-//MARK: Safe Bool
-extension Optional where Wrapped == Bool {
-    var ESSafeValue:Bool { get { return self ?? false } }
-}
-//MARK: Safe Float
-extension Optional where Wrapped == Float {
-    var ESSafeValue:Float { get { return self ?? 0 } }
-}
-//MARK: Safe CGFloat
-extension Optional where Wrapped == CGFloat {
-    var ESSafeValue:CGFloat { get { return self ?? 0 } }
-}
-//MAR: Safe Double
-extension Optional where Wrapped == Double {
-    var ESSafeValue:Double { get { return self ?? 0 } }
-}
-//MAR: Safe Date
-extension Optional where Wrapped == Date {
-    var ESSafeValue:Date { get { return self ?? Date() } }
-}
-//MARK: Safe Data
-extension Optional where Wrapped == Data {
-    var ESSafeValue:Data { get { return self ?? Data() } }
-}
-//MARK: Safe URL
-extension Optional where Wrapped == URL {
-    var ESSafeValue:URL { get { return self ?? URL(fileURLWithPath: "") } }
-}
-//MARK: Safe UIImage
-extension Optional where Wrapped == UIImage {
-    var ESSafeValue:UIImage { get { return self ?? UIImage() } }
-}
-//MARK: Safe UIImageView
-extension Optional where Wrapped == UIImageView {
-    var ESSafeValue:UIImageView { get { return self ?? UIImageView() } }
-}
-//MARK: Safe UIView
-extension Optional where Wrapped == UIView {
-    var ESSafeValue:UIView { get { return self ?? UIView() } }
-}
-//MARK: Safe [Any]
-extension Optional where Wrapped == [Any] {
-    var ESSafeValue:[Any] { get { return self ?? [] } }
-}
-//MARK: Safe [String:Any]
-extension Optional where Wrapped == [String:Any] {
-    var ESSafeValue:[String:Any] { get { return self ?? [:] } }
-}
-//MARK: Safe [String]
-extension Optional where Wrapped == [String] {
-    var ESSafeValue:[String] { get { return self ?? [] } }
+    
+    
 }

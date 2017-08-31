@@ -12,6 +12,7 @@
 		AA4CD6001F33DBA6002E3663 /* ESUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4CD5F21F33DBA6002E3663 /* ESUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA4CD60C1F33F54E002E3663 /* ESDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CD60A1F33F54E002E3663 /* ESDate.swift */; };
 		AA4CD60D1F33F54E002E3663 /* ESUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CD60B1F33F54E002E3663 /* ESUtilities.swift */; };
+		AAEC47901F5869FB00E41301 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC478F1F5869FB00E41301 /* Optionals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,8 @@
 		AA4CD5FF1F33DBA6002E3663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA4CD60A1F33F54E002E3663 /* ESDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDate.swift; sourceTree = "<group>"; };
 		AA4CD60B1F33F54E002E3663 /* ESUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESUtilities.swift; sourceTree = "<group>"; };
+		AAEC478F1F5869FB00E41301 /* Optionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
+		AAEC47911F586C3800E41301 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +81,9 @@
 				AA4CD5F21F33DBA6002E3663 /* ESUtilities.h */,
 				AA4CD60A1F33F54E002E3663 /* ESDate.swift */,
 				AA4CD60B1F33F54E002E3663 /* ESUtilities.swift */,
+				AAEC478F1F5869FB00E41301 /* Optionals.swift */,
 				AA4CD5F31F33DBA6002E3663 /* Info.plist */,
+				AAEC47911F586C3800E41301 /* Common.swift */,
 			);
 			path = ESUtilities;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEC47901F5869FB00E41301 /* Optionals.swift in Sources */,
 				AA4CD60D1F33F54E002E3663 /* ESUtilities.swift in Sources */,
 				AA4CD60C1F33F54E002E3663 /* ESDate.swift in Sources */,
 			);
