@@ -3,7 +3,7 @@
 //  ESUtilities
 //
 //  Created by Eslam on 8/31/17.
-//  Copyright © 2017 magdsoft. All rights reserved.
+//  Copyright © 2017 eslam. All rights reserved.
 //
 
 import Foundation

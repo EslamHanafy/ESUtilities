@@ -11,15 +11,12 @@ import UIKit
 
 public class ESUtilities:NSObject {
     
-    /// the shared instance of utilites class
-    public static let utility = ESUtilities()
-    
     //MARK: - Common properties
     
     /// the screen width of the device
-    public var screenWidth:CGFloat {get { return UIScreen.main.bounds.size.width }}
+    public class var screenWidth:CGFloat {get { return UIScreen.main.bounds.size.width }}
     /// the screen height of the device
-    public var screenHeight:CGFloat {get { return UIScreen.main.bounds.size.height }}
+    public class var screenHeight:CGFloat {get { return UIScreen.main.bounds.size.height }}
     
     
     //MARK: - Common methods
@@ -27,7 +24,7 @@ public class ESUtilities:NSObject {
     /// make acopy of string and add string to clipboard
     ///
     /// - Parameter str: the string that you want to copy
-    public func copyStringToClipboard(str:String) {
+    public class func copyStringToClipboard(str:String) {
         UIPasteboard.general.string = str
     }
     
@@ -35,7 +32,7 @@ public class ESUtilities:NSObject {
     ///
     /// - Parameter number: the number that you want to call it
     /// - Returns: true if the call succeed and false if the call failed
-    public func call(number:String) ->Bool  {
+    public class func call(number:String) ->Bool  {
         let url = URL(string:"tel://\(number)")
         //check if the url is valid
         if let url = url{
@@ -58,7 +55,7 @@ public class ESUtilities:NSObject {
     /// get current active view controller if exist
     ///
     /// - Returns: the current active view controller if exist
-    public func getCurrentViewController() -> UIViewController? {
+    public class func getCurrentViewController() -> UIViewController? {
         
         // we must get the root UIViewController and iterate through presented views
         if let rootController = UIApplication.shared.keyWindow?.rootViewController {
@@ -81,7 +78,7 @@ public class ESUtilities:NSObject {
     ///
     /// - Parameter key: the key for the string
     /// - Returns: the specific localized sitring for the given key
-    public func localizedSitringFor(key:String)->String {
+    public class func localizedSitringFor(key:String)->String {
         return NSLocalizedString(key, comment: "")
     }
     
@@ -94,7 +91,7 @@ public class ESUtilities:NSObject {
     ///   - hex: six hex characters for the color.
     ///   - alpha: alpha value for the color , default is 1.0.
     /// - Returns: the color that is referring to the given hex code, but if you gave a wrong code, it will return black color.
-    public func colorFrom (hexString hex:String,withAlpha alpha:CGFloat = 1.0) -> UIColor {
+    public class func colorFrom (hexString hex:String,withAlpha alpha:CGFloat = 1.0) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
