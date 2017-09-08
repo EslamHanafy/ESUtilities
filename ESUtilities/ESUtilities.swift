@@ -114,5 +114,18 @@ public class ESUtilities:NSObject {
     }
 
     
+    //MARK: - alerts
+    /// display alert with message
+    ///
+    /// - Parameters:
+    ///   - messeg: the alert message
+    ///   - controller: the controller that should present this alert, default value is the current view controller
+    public class func displayAlert(withMessage messeg:String,forController controller:UIViewController? = nil){
+        let alert = UIAlertController(title: "", message: messeg, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: localizedSitringFor(key: "ok"), style: UIAlertActionStyle.default, handler: nil))
+        ESMainQueue {
+            controller == nil ? getCurrentViewController()?.present(alert, animated: true, completion: nil) : controller?.present(alert, animated: true, completion: nil)
+        }
+    }
     
 }
